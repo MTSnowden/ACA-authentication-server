@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser')
 const mongoose = require('mongoose')
 const AuthRoutes = require('./express/routes/auth')
 
-mongoose.connect(/* INSERT DB CONNECTION */)
+mongoose.connect('mongodb+srv://Oprah:Oprah@cluster0-468if.mongodb.net/test?retryWrites=true&w=majority')
 
 const port = process.env.PORT || 4001
 const app = express()
@@ -22,3 +22,4 @@ app.get('/', (req, res) => res.send('Default route!'))
 app.listen(port, () => {
   console.log(`Express app running on localhost:${port}`)
 })
+
